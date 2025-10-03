@@ -1,4 +1,4 @@
-# secure-serverless-directory
+## secure-serverless-directory
 The "Secure Serverless Directory" is a full-stack, CRUD employee directory. It's a blueprint for secure, cost-effective cloud-native apps on AWS, emphasizing security by design, serverless architecture, and AWS Free Tier adherence for scalable, automated deployments.
 Its core principles are security by design, a serverless-first approach, and cost optimization.
 
@@ -8,7 +8,7 @@ Its core principles are security by design, a serverless-first approach, and cos
 
 •	Principle 3: Free-Tier Focused A defining feature is its adherence to AWS Free Tier limits. This deliberate choice democratizes access to modern cloud architecture, enabling students, developers, and professionals to build and experiment without cost. Every service choice and configuration reflects this, with t2.micro EC2 instances for NAT and bastion hosts, Lambda usage within free tier limits, API Gateway's million free calls, DynamoDB's PAY_PER_REQUEST mode, and S3 usage for frontend hosting well within its free allowance. This focus makes the project an unparalleled educational tool and a zero-risk platform for prototyping.
 
-9.1 Problem Statement
+## 9.1 Problem Statement
 
 The project is designed to directly solve pressing and interconnected challenges faced by engineering teams building modern web applications. The central problem is a strategic and technical dilemma.
 
@@ -26,11 +26,11 @@ o	The Problem of Inefficient Frontend Hosting: Serving a simple website traditio
 
 o	The Problem of Manual, Error-Prone Deployments: Manual infrastructure configuration leads to inconsistency and "configuration drift". The project definitively solves this using AWS CloudFormation to define the entire infrastructure as code (IaC), enabling one-click, reliable, and perfectly repeatable deployments, forming the foundation for DevOps and CI/CD practices.
 
-9.2 Project Objectives
+## 9.2 Project Objectives
 
 The development of the Secure Serverless Directory was guided by a precise set of architectural, functional, and operational objectives, each contributing to the project's core goals of security, efficiency, and educational value.
 
-9.2.1 Architectural Objectives
+# 9.2.1 Architectural Objectives
 
 •	Objective: To implement a secure and logically isolated network foundation using an Amazon Virtual Private Cloud (VPC) with segregated public and private subnets. 
 Justification: This is the most fundamental security objective, establishing a primary boundary of control and enabling granular traffic rules, directly mitigating external threats and meeting compliance standards.
@@ -41,7 +41,7 @@ Justification: This enhances both security and performance by routing traffic ov
 •	Objective: To provide necessary outbound internet connectivity for private subnet resources through a cost-effective NAT (Network Address Translation) Instance. 
 Justification: A NAT device enables one-way outbound communication for private resources (e.g., updates, third-party APIs). The choice of a t2.micro NAT Instance over a managed NAT Gateway aligns with the "Free-Tier Focused" principle, providing functionality at a covered cost.
 
-9.2.2 Functional Objectives
+# 9.2.2 Functional Objectives
 
 •	Objective: To build a fully operational CRUD (Create, Read, Update, Delete) web application for managing employee data. 
 Justification: This serves as a realistic architectural blueprint, demonstrating practical interaction between the frontend, API layer, compute logic, and database, implementing all major HTTP methods and a complete data lifecycle.
@@ -52,7 +52,7 @@ Justification: Using API Gateway as a managed API layer centralizes request hand
 •	Objective: To provide an intuitive and responsive client-side user interface hosted as a static website on Amazon S3. 
 Justification: A functional frontend demonstrates the full end-to-end data flow and makes the project usable and testable. Hosting it as a static site on S3 showcases the most cost-effective and scalable method for delivering frontend assets, completing the serverless picture.
 
-9.2.3 Operational and Educational Objectives
+# 9.2.3 Operational and Educational Objectives
 
 •	Objective: To define and manage the entire infrastructure stack using AWS CloudFormation, embodying the Infrastructure as Code (IaC) methodology. 
 Justification: IaC is a cornerstone of modern DevOps. Codifying infrastructure enables version control, peer-review, automated deployments, eliminates configuration drift, facilitates disaster recovery, and creates identical environments.
@@ -65,7 +65,7 @@ Justification: This makes abstract network security concepts tangible. Providing
 
 Here are the detailed steps to deploy and run this project:
 
-9.3 Detailed Project Steps
+## 9.3 Detailed Project Steps
 
 Step 1: Prerequisites and Initial Setup
 
